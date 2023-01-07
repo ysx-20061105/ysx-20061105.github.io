@@ -6,21 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://ysx-20061105.github.io">
-  <title>Alonzoの博客</title>
+  <title>剑指offer 28.对称的二叉树 | Alonzoの博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-    
-    <!-- <meta name="keywords" content="java">
-    <meta name="description" content="刷题笔记"> -->
-  
-  <meta name="description" content="刷题笔记">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Alonzoの博客">
-<meta property="og:url" content="https://ysx-20061105.github.io/index.html">
+  <meta name="description" content="剑指offer 28.对称的二叉树请实现一个函数，用来判断一棵二叉树是不是对称的。如果一棵二叉树和它的镜像一样，那么它是对称的。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="剑指offer 28.对称的二叉树">
+<meta property="og:url" content="https://ysx-20061105.github.io/2023/01/07/%E5%89%91%E6%8C%87offer-28-%E5%AF%B9%E7%A7%B0%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91/index.html">
 <meta property="og:site_name" content="Alonzoの博客">
-<meta property="og:description" content="刷题笔记">
+<meta property="og:description" content="剑指offer 28.对称的二叉树请实现一个函数，用来判断一棵二叉树是不是对称的。如果一棵二叉树和它的镜像一样，那么它是对称的。">
 <meta property="og:locale" content="zn_CN">
+<meta property="article:published_time" content="2023-01-07T13:39:09.000Z">
+<meta property="article:modified_time" content="2023-01-07T13:39:33.363Z">
 <meta property="article:author" content="Alonzo">
 <meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
@@ -198,25 +196,25 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-
-  
-    <article id="post-剑指offer-28-对称的二叉树" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-剑指offer-28-对称的二叉树" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/01/07/%E5%89%91%E6%8C%87offer-28-%E5%AF%B9%E7%A7%B0%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91/" target="_blank">剑指offer 28.对称的二叉树</a>
-  
+    <h1 class="article-title" itemprop="name">
+      剑指offer 28.对称的二叉树
     </h1>
   
 
 
   
   
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
 <a href="/2023/01/07/%E5%89%91%E6%8C%87offer-28-%E5%AF%B9%E7%A7%B0%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91/" class="archive-article-date">
         <time datetime="2023-01-07T13:39:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-07</time>
 </a>
@@ -224,6 +222,27 @@
   
   
     
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">317字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">1分</span>
+    </span>
+  </span>
+</div>
+
 
   
   </header>
@@ -231,13 +250,50 @@
   <div class="article-entry" itemprop="articleBody">
     
     <h1 id="剑指offer-28-对称的二叉树"><a href="#剑指offer-28-对称的二叉树" class="headerlink" title="剑指offer 28.对称的二叉树"></a>剑指offer 28.对称的二叉树</h1><p>请实现一个函数，用来判断一棵二叉树是不是对称的。如果一棵二叉树和它的镜像一样，那么它是对称的。</p>
-    
-    <a class="article-more-a" href="/2023/01/07/%E5%89%91%E6%8C%87offer-28-%E5%AF%B9%E7%A7%B0%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91/#more">more >></a>
-    
-    
+<span id="more"></span>
+
+<blockquote>
+<p>例如，二叉树 [1,2,2,3,4,4,3] 是对称的。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> 1</span><br><span class="line">/ \</span><br><span class="line">2   2</span><br><span class="line">/ \ / \</span><br><span class="line">3  4 4  3</span><br></pre></td></tr></table></figure>
+
+<p>但是下面这个 [1,2,2,null,3,null,3] 则不是镜像对称的:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> 1</span><br><span class="line">/ \</span><br><span class="line">2   2</span><br><span class="line">\   \</span><br><span class="line">3    3</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>对称二叉树定义： 对于树中 任意两个对称节点 L 和 R，一定有：</p>
+<ol>
+<li>L.val&#x3D;R.val ：即此两对称节点值相等。</li>
+<li>L.left.val &#x3D; R.right.val ：即 L 的 左子节点 和 R 的 右子节点 对称；</li>
+<li>L.right.val &#x3D; R.left.val：即 L 的 右子节点 和 R 的 左子节点 对称。</li>
+</ol>
+<p>根据以上规律，考虑从顶至底递归，判断每对节点是否对称，从而判断树是否为对称二叉树。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">isSymmetric</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> root==<span class="literal">null</span>?<span class="literal">true</span>:recure(root.left,root.right);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">recure</span><span class="params">(TreeNode L,TreeNode R)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(L==<span class="literal">null</span> &amp;&amp;R==<span class="literal">null</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">if</span>(L==<span class="literal">null</span> || R==<span class="literal">null</span> || L.val!=R.val) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">return</span> recure(L.left,R.right) &amp;&amp; recure(L.right,R.left);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>也可以使用27得到镜像二叉树，在对两棵树进行对比是否是相同树</p>
 
     
 
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          Alonzo
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://ysx-20061105.github.io/2023/01/07/剑指offer-28-对称的二叉树/" title="剑指offer 28.对称的二叉树" target="_blank">https://ysx-20061105.github.io/2023/01/07/剑指offer-28-对称的二叉树/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
     
 
   </div>
@@ -247,16 +303,76 @@
     
 
     
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2023/01/07/%E5%89%91%E6%8C%87offer-28-%E5%AF%B9%E7%A7%B0%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91/">展开全文 >></a>
-    </p>
+
     
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://ysx-20061105.github.io/2023/01/07/%E5%89%91%E6%8C%87offer-28-%E5%AF%B9%E7%A7%B0%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
 
     
     <div class="clearfix"></div>
   </div>
   </div>
 </article>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2023/01/07/%E5%89%91%E6%8C%87offer-27-%E4%BA%8C%E5%8F%89%E6%A0%91%E9%95%9C%E5%83%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">剑指offer 27.二叉树镜像</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -277,710 +393,14 @@
 
 
 
-  
-    <article id="post-剑指offer-27-二叉树镜像" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/01/07/%E5%89%91%E6%8C%87offer-27-%E4%BA%8C%E5%8F%89%E6%A0%91%E9%95%9C%E5%83%8F/" target="_blank">剑指offer 27.二叉树镜像</a>
-  
-    </h1>
-  
 
 
-  
-  
-<a href="/2023/01/07/%E5%89%91%E6%8C%87offer-27-%E4%BA%8C%E5%8F%89%E6%A0%91%E9%95%9C%E5%83%8F/" class="archive-article-date">
-        <time datetime="2023-01-07T13:38:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-07</time>
-</a>
 
-  
-  
-    
 
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="剑指offer-27-二叉树镜像"><a href="#剑指offer-27-二叉树镜像" class="headerlink" title="剑指offer 27.二叉树镜像"></a>剑指offer 27.二叉树镜像</h1><p>请完成一个函数，输入一个二叉树，该函数输出它的镜像。</p>
-    
-    <a class="article-more-a" href="/2023/01/07/%E5%89%91%E6%8C%87offer-27-%E4%BA%8C%E5%8F%89%E6%A0%91%E9%95%9C%E5%83%8F/#more">more >></a>
-    
-    
 
-    
 
-    
 
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
 
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2023/01/07/%E5%89%91%E6%8C%87offer-27-%E4%BA%8C%E5%8F%89%E6%A0%91%E9%95%9C%E5%83%8F/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-剑指offer-26-树的子结构" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/01/07/%E5%89%91%E6%8C%87offer-26-%E6%A0%91%E7%9A%84%E5%AD%90%E7%BB%93%E6%9E%84/" target="_blank">剑指offer 26.树的子结构</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2023/01/07/%E5%89%91%E6%8C%87offer-26-%E6%A0%91%E7%9A%84%E5%AD%90%E7%BB%93%E6%9E%84/" class="archive-article-date">
-        <time datetime="2023-01-07T13:36:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-07</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="剑指offer-26-树的子结构"><a href="#剑指offer-26-树的子结构" class="headerlink" title="剑指offer 26.树的子结构"></a>剑指offer 26.树的子结构</h1><p>输入两棵二叉树A和B，判断B是不是A的子结构。(约定空树不是任意一个树的子结构)</p>
-<p>B是A的子结构， 即 A中有出现和B相同的结构和节点值。</p>
-    
-    <a class="article-more-a" href="/2023/01/07/%E5%89%91%E6%8C%87offer-26-%E6%A0%91%E7%9A%84%E5%AD%90%E7%BB%93%E6%9E%84/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2023/01/07/%E5%89%91%E6%8C%87offer-26-%E6%A0%91%E7%9A%84%E5%AD%90%E7%BB%93%E6%9E%84/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-剑指offer-10-Ⅰ-斐波那契额数列" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/01/07/%E5%89%91%E6%8C%87offer-10-%E2%85%A0-%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E9%A2%9D%E6%95%B0%E5%88%97/" target="_blank">剑指offer 10 -Ⅰ.斐波那契额数列</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2023/01/07/%E5%89%91%E6%8C%87offer-10-%E2%85%A0-%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E9%A2%9D%E6%95%B0%E5%88%97/" class="archive-article-date">
-        <time datetime="2023-01-07T13:34:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-07</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="剑指offer-10-Ⅰ-斐波那契额数列"><a href="#剑指offer-10-Ⅰ-斐波那契额数列" class="headerlink" title="剑指offer 10 -Ⅰ.斐波那契额数列"></a>剑指offer 10 -Ⅰ.斐波那契额数列</h1><p>写一个函数，输入 <code>n</code> ，求斐波那契（Fibonacci）数列的第 <code>n</code> 项（即 <code>F(N)</code>）。斐波那契数列的定义如下：</p>
-<p>F(0) &#x3D; 0,   F(1) &#x3D; 1</p>
-<p>F(N) &#x3D; F(N - 1) + F(N - 2), 其中 N &gt; 1.</p>
-<p>斐波那契数列由 0 和 1 开始，之后的斐波那契数就是由之前的两数相加而得出。</p>
-<p>答案需要取模 1e9+7（1000000007），如计算初始结果为：1000000008，请返回 1。</p>
-    
-    <a class="article-more-a" href="/2023/01/07/%E5%89%91%E6%8C%87offer-10-%E2%85%A0-%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E9%A2%9D%E6%95%B0%E5%88%97/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2023/01/07/%E5%89%91%E6%8C%87offer-10-%E2%85%A0-%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E9%A2%9D%E6%95%B0%E5%88%97/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-剑指offer-32-Ⅲ-从上到下打印二叉树Ⅲ" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/01/06/%E5%89%91%E6%8C%87offer-32-%E2%85%A2-%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91%E2%85%A2/" target="_blank">剑指offer 32 - Ⅲ.从上到下打印二叉树Ⅲ</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2023/01/06/%E5%89%91%E6%8C%87offer-32-%E2%85%A2-%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91%E2%85%A2/" class="archive-article-date">
-        <time datetime="2023-01-06T13:11:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-06</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="剑指offer-32-Ⅲ-从上到下打印二叉树Ⅲ"><a href="#剑指offer-32-Ⅲ-从上到下打印二叉树Ⅲ" class="headerlink" title="剑指offer 32 - Ⅲ.从上到下打印二叉树Ⅲ"></a>剑指offer 32 - Ⅲ.从上到下打印二叉树Ⅲ</h1><p>请实现一个函数按照之字形顺序打印二叉树，即第一行按照从左到右的顺序打印，第二层按照从右到左的顺序打印，第三行再按照从左到右的顺序打印，其他行以此类推。</p>
-    
-    <a class="article-more-a" href="/2023/01/06/%E5%89%91%E6%8C%87offer-32-%E2%85%A2-%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91%E2%85%A2/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2023/01/06/%E5%89%91%E6%8C%87offer-32-%E2%85%A2-%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91%E2%85%A2/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-剑指offer-32-Ⅱ-从上到下打印二叉树Ⅱ" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/01/06/%E5%89%91%E6%8C%87offer-32-%E2%85%A1-%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91%E2%85%A1/" target="_blank">剑指offer 32 - Ⅱ.从上到下打印二叉树Ⅱ</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2023/01/06/%E5%89%91%E6%8C%87offer-32-%E2%85%A1-%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91%E2%85%A1/" class="archive-article-date">
-        <time datetime="2023-01-06T13:04:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-06</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="剑指offer-32-Ⅱ-从上到下打印二叉树Ⅱ"><a href="#剑指offer-32-Ⅱ-从上到下打印二叉树Ⅱ" class="headerlink" title="剑指offer 32 - Ⅱ.从上到下打印二叉树Ⅱ"></a>剑指offer 32 - Ⅱ.从上到下打印二叉树Ⅱ</h1><p>从上到下按层打印二叉树，同一层的节点按从左到右的顺序打印，每一层打印到一行。</p>
-    
-    <a class="article-more-a" href="/2023/01/06/%E5%89%91%E6%8C%87offer-32-%E2%85%A1-%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91%E2%85%A1/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2023/01/06/%E5%89%91%E6%8C%87offer-32-%E2%85%A1-%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91%E2%85%A1/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-剑指offer-32-Ⅰ-从上到下打印二叉树" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/01/06/%E5%89%91%E6%8C%87offer-32-%E2%85%A0-%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91/" target="_blank">剑指offer 32 - Ⅰ.从上到下打印二叉树</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2023/01/06/%E5%89%91%E6%8C%87offer-32-%E2%85%A0-%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91/" class="archive-article-date">
-        <time datetime="2023-01-06T12:52:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-06</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="剑指offer-32-Ⅰ-从上到下打印二叉树"><a href="#剑指offer-32-Ⅰ-从上到下打印二叉树" class="headerlink" title="剑指offer 32 - Ⅰ.从上到下打印二叉树"></a>剑指offer 32 - Ⅰ.从上到下打印二叉树</h1><p>从上到下打印出二叉树的每个节点，同一层的节点按照从左到右的顺序打印。</p>
-    
-    <a class="article-more-a" href="/2023/01/06/%E5%89%91%E6%8C%87offer-32-%E2%85%A0-%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2023/01/06/%E5%89%91%E6%8C%87offer-32-%E2%85%A0-%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-剑指offer-53-Ⅱ-0-n-1中缺失的数字" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/01/06/%E5%89%91%E6%8C%87offer-53-%E2%85%A1-0-n-1%E4%B8%AD%E7%BC%BA%E5%A4%B1%E7%9A%84%E6%95%B0%E5%AD%97/" target="_blank">剑指offer 53 - Ⅱ.0~n-1中缺失的数字</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2023/01/06/%E5%89%91%E6%8C%87offer-53-%E2%85%A1-0-n-1%E4%B8%AD%E7%BC%BA%E5%A4%B1%E7%9A%84%E6%95%B0%E5%AD%97/" class="archive-article-date">
-        <time datetime="2023-01-06T12:40:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-06</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="剑指offer-53-Ⅱ-0-n-1中缺失的数字"><a href="#剑指offer-53-Ⅱ-0-n-1中缺失的数字" class="headerlink" title="剑指offer 53 - Ⅱ.0~n-1中缺失的数字"></a>剑指offer 53 - Ⅱ.0~n-1中缺失的数字</h1><p>一个长度为n-1的递增排序数组中的所有数字都是唯一的，并且每个数字都在范围0～n-1之内。在范围0～n-1内的n个数字中有且只有一个数字不在该数组中，请找出这个数字。</p>
-    
-    <a class="article-more-a" href="/2023/01/06/%E5%89%91%E6%8C%87offer-53-%E2%85%A1-0-n-1%E4%B8%AD%E7%BC%BA%E5%A4%B1%E7%9A%84%E6%95%B0%E5%AD%97/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2023/01/06/%E5%89%91%E6%8C%87offer-53-%E2%85%A1-0-n-1%E4%B8%AD%E7%BC%BA%E5%A4%B1%E7%9A%84%E6%95%B0%E5%AD%97/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-剑指offer-53-I-在排序数组中查找数字-I" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/01/06/%E5%89%91%E6%8C%87offer-53-I-%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E6%95%B0%E5%AD%97-I/" target="_blank">剑指 offer 53 - I. 在排序数组中查找数字 I</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2023/01/06/%E5%89%91%E6%8C%87offer-53-I-%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E6%95%B0%E5%AD%97-I/" class="archive-article-date">
-        <time datetime="2023-01-06T12:39:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-06</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="剑指-offer-53-I-在排序数组中查找数字-I"><a href="#剑指-offer-53-I-在排序数组中查找数字-I" class="headerlink" title="剑指 offer 53 - I. 在排序数组中查找数字 I"></a>剑指 offer 53 - I. 在排序数组中查找数字 I</h1><p>统计一个数字在排序数组中出现的次数。</p>
-    
-    <a class="article-more-a" href="/2023/01/06/%E5%89%91%E6%8C%87offer-53-I-%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E6%95%B0%E5%AD%97-I/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2023/01/06/%E5%89%91%E6%8C%87offer-53-I-%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E6%95%B0%E5%AD%97-I/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-剑指offer-50-第一个只出现一次的字符" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/01/06/%E5%89%91%E6%8C%87offer-50-%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E5%AD%97%E7%AC%A6/" target="_blank">剑指offer 50.第一个只出现一次的字符</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2023/01/06/%E5%89%91%E6%8C%87offer-50-%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E5%AD%97%E7%AC%A6/" class="archive-article-date">
-        <time datetime="2023-01-06T12:38:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-06</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="剑指offer-50-第一个只出现一次的字符"><a href="#剑指offer-50-第一个只出现一次的字符" class="headerlink" title="剑指offer 50.第一个只出现一次的字符"></a>剑指offer 50.第一个只出现一次的字符</h1><p>在字符串 s 中找出第一个只出现一次的字符。如果没有，返回一个单空格。 s 只包含小写字母。</p>
-    
-    <a class="article-more-a" href="/2023/01/06/%E5%89%91%E6%8C%87offer-50-%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E5%AD%97%E7%AC%A6/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2023/01/06/%E5%89%91%E6%8C%87offer-50-%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E5%AD%97%E7%AC%A6/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -1020,8 +440,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
